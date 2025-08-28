@@ -50,7 +50,7 @@ jobs:
       shell: bash
     - name: Upload luac.cross
       if: ${{ success() }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: luac.cross_${{ matrix.lua_ver }}_${{ matrix.numbers }}
         path: luac.cross
@@ -74,7 +74,7 @@ jobs:
       shell: cmd
     - name: Upload luac.cross
       if: ${{ success() }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: luac.cross_51_float_win
         path: luac.cross.exe
